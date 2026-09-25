@@ -41,3 +41,16 @@ pip install -r requirements.txt
 ```
 
 `.venv/` is gitignored. Recreate it the same way on a fresh checkout.
+
+## Part 1: Dataset and embeddings
+
+```bash
+python data.py
+python embed.py
+```
+
+`data.py` samples ~6,000 posts from 20 Newsgroups and writes `data/metadata.json`.
+`embed.py` embeds those posts and the five queries in `queries.md`.
+Generated files under `data/` are gitignored. The Qdrant dashboard will stay
+empty until Part 2 upserts vectors into collections.
+

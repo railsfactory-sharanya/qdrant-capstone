@@ -1,7 +1,11 @@
 .venv/
+.DS_Store
 
 # Created by the Qdrant container
 qdrant_storage/
+
+# Generated embeddings and metadata (recreated by data.py / embed.py)
+data/
 
 # Bytecode next to our scripts after we start running Python
 __pycache__/
