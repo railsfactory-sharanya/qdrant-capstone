@@ -1,0 +1,502 @@
+[
+  {
+    "query": "why does my graphics card driver crash after a Windows update",
+    "cosine": [
+      {
+        "id": 982,
+        "score": 0.4384249,
+        "category": "comp.os.ms-windows.misc",
+        "text": "I have the same card, TVGA-8900c. When I checked, the latest driver for windows 3.1 is dated Aug. 92 in garbo.uwasa.fi in /win31/drivers/video. If you find a better version (updated) please let me know, Thanks."
+      },
+      {
+        "id": 17,
+        "score": 0.41676474,
+        "category": "comp.os.ms-windows.misc",
+        "text": "Hi. I am having some interesting problems with my Boca graphics card, which is based on the Cirrus Logic chipset (I am not sure exactly which one). The problem is as follows: If I use any Windows driver at 800x600 except for the 64K-colo..."
+      },
+      {
+        "id": 309,
+        "score": 0.39710075,
+        "category": "comp.sys.ibm.pc.hardware",
+        "text": "I have uploaded the most recent Windows drivers for the Cirrus GD5426 chip based display cards to the uploads directory at ftp.cica.indiana.edu (file is 5426dr13.zip). They're very recent, I downloaded them from the Cirrus BBS (570-226-2..."
+      },
+      {
+        "id": 1621,
+        "score": 0.39337713,
+        "category": "comp.os.ms-windows.misc",
+        "text": "[munch] [munch following is reformatted] I'd say that the massive crash problems are exceedingly rare. Windows _itself_ almost never crashes, but it can be crashed by an errant application (My personal favorite? Any one of the Corel 3.0 ..."
+      },
+      {
+        "id": 4382,
+        "score": 0.39003965,
+        "category": "comp.graphics",
+        "text": "I have an ATI Graph. Ultra Pro VLB w/2 megs, and have a small question about Graphics Workshop for Windows. When I exit from it it says my current driver can handle on 32768 colors when I am actually in 1024x768x65000 color mode. Is this..."
+      }
+    ],
+    "euclid": [
+      {
+        "id": 982,
+        "score": 1.0597879,
+        "category": "comp.os.ms-windows.misc",
+        "text": "I have the same card, TVGA-8900c. When I checked, the latest driver for windows 3.1 is dated Aug. 92 in garbo.uwasa.fi in /win31/drivers/video. If you find a better version (updated) please let me know, Thanks."
+      },
+      {
+        "id": 17,
+        "score": 1.0800327,
+        "category": "comp.os.ms-windows.misc",
+        "text": "Hi. I am having some interesting problems with my Boca graphics card, which is based on the Cirrus Logic chipset (I am not sure exactly which one). The problem is as follows: If I use any Windows driver at 800x600 except for the 64K-colo..."
+      },
+      {
+        "id": 309,
+        "score": 1.0980885,
+        "category": "comp.sys.ibm.pc.hardware",
+        "text": "I have uploaded the most recent Windows drivers for the Cirrus GD5426 chip based display cards to the uploads directory at ftp.cica.indiana.edu (file is 5426dr13.zip). They're very recent, I downloaded them from the Cirrus BBS (570-226-2..."
+      },
+      {
+        "id": 1621,
+        "score": 1.1014744,
+        "category": "comp.os.ms-windows.misc",
+        "text": "[munch] [munch following is reformatted] I'd say that the massive crash problems are exceedingly rare. Windows _itself_ almost never crashes, but it can be crashed by an errant application (My personal favorite? Any one of the Corel 3.0 ..."
+      },
+      {
+        "id": 4382,
+        "score": 1.1045,
+        "category": "comp.graphics",
+        "text": "I have an ATI Graph. Ultra Pro VLB w/2 megs, and have a small question about Graphics Workshop for Windows. When I exit from it it says my current driver can handle on 32768 colors when I am actually in 1024x768x65000 color mode. Is this..."
+      }
+    ],
+    "dot": [
+      {
+        "id": 982,
+        "score": 0.4384249,
+        "category": "comp.os.ms-windows.misc",
+        "text": "I have the same card, TVGA-8900c. When I checked, the latest driver for windows 3.1 is dated Aug. 92 in garbo.uwasa.fi in /win31/drivers/video. If you find a better version (updated) please let me know, Thanks."
+      },
+      {
+        "id": 17,
+        "score": 0.41676474,
+        "category": "comp.os.ms-windows.misc",
+        "text": "Hi. I am having some interesting problems with my Boca graphics card, which is based on the Cirrus Logic chipset (I am not sure exactly which one). The problem is as follows: If I use any Windows driver at 800x600 except for the 64K-colo..."
+      },
+      {
+        "id": 309,
+        "score": 0.39710075,
+        "category": "comp.sys.ibm.pc.hardware",
+        "text": "I have uploaded the most recent Windows drivers for the Cirrus GD5426 chip based display cards to the uploads directory at ftp.cica.indiana.edu (file is 5426dr13.zip). They're very recent, I downloaded them from the Cirrus BBS (570-226-2..."
+      },
+      {
+        "id": 1621,
+        "score": 0.39337713,
+        "category": "comp.os.ms-windows.misc",
+        "text": "[munch] [munch following is reformatted] I'd say that the massive crash problems are exceedingly rare. Windows _itself_ almost never crashes, but it can be crashed by an errant application (My personal favorite? Any one of the Corel 3.0 ..."
+      },
+      {
+        "id": 4382,
+        "score": 0.39003965,
+        "category": "comp.graphics",
+        "text": "I have an ATI Graph. Ultra Pro VLB w/2 megs, and have a small question about Graphics Workshop for Windows. When I exit from it it says my current driver can handle on 32768 colors when I am actually in 1024x768x65000 color mode. Is this..."
+      }
+    ],
+    "rank_order_differs": []
+  },
+  {
+    "query": "who is likely to win the hockey playoffs this season",
+    "cosine": [
+      {
+        "id": 5335,
+        "score": 0.6134084,
+        "category": "rec.sport.hockey",
+        "text": "Here is yet another prediction for them great playoffs! (you may laugh at your convenience!) :) Adams Division (I hate the NE (name) divisoin!!!) BOS vs BUF BOS in 5 (the B's are hot lately!) MON vs QUE MON in 7 (This will be the series ..."
+      },
+      {
+        "id": 3813,
+        "score": 0.61252654,
+        "category": "rec.sport.hockey",
+        "text": "Well, the tentative rules, anyway. And, of course, since the season is not entirely over, tentative entry form. But who cares? The real hockey season is starting!!!!! Here's the deal: You email (preferably) or post your predictions, AND ..."
+      },
+      {
+        "id": 207,
+        "score": 0.6104337,
+        "category": "rec.sport.hockey",
+        "text": "NHL PLAYOFF RESULTS FOR 4/22/93. -------------------------------------------------------------------------------- CONFERENCE SEMI-FINALS BEST OF SEVEN PATRICK ADAMS NORRIS SMYTHE NJ BUF (leads 3-0) STL (leads 2-0) WIN PIT (leads 3-0) BOS..."
+      },
+      {
+        "id": 4436,
+        "score": 0.60561275,
+        "category": "rec.sport.hockey",
+        "text": "NHL PLAYOFF RESULTS FOR 4/21/93. -------------------------------------------------------------------------------- CONFERENCE SEMI-FINALS BEST OF SEVEN PATRICK ADAMS NORRIS SMYTHE NJ BUF (leads 2-0) STL (leads 2-0) WIN PIT (leads 2-0) BOS..."
+      },
+      {
+        "id": 2993,
+        "score": 0.593521,
+        "category": "rec.sport.hockey",
+        "text": "I'd have to take Quebec in 6. Hawks will win, but it will take 5. Cal in 7. Boston will beat Quebec in 6. Pitt in 6. The Bruins arent a pushover. The hawks havent had problems with them all year. Yep, I agree. Unless the Hawks can someho..."
+      }
+    ],
+    "euclid": [
+      {
+        "id": 5335,
+        "score": 0.8793084,
+        "category": "rec.sport.hockey",
+        "text": "Here is yet another prediction for them great playoffs! (you may laugh at your convenience!) :) Adams Division (I hate the NE (name) divisoin!!!) BOS vs BUF BOS in 5 (the B's are hot lately!) MON vs QUE MON in 7 (This will be the series ..."
+      },
+      {
+        "id": 3813,
+        "score": 0.8803107,
+        "category": "rec.sport.hockey",
+        "text": "Well, the tentative rules, anyway. And, of course, since the season is not entirely over, tentative entry form. But who cares? The real hockey season is starting!!!!! Here's the deal: You email (preferably) or post your predictions, AND ..."
+      },
+      {
+        "id": 207,
+        "score": 0.8826848,
+        "category": "rec.sport.hockey",
+        "text": "NHL PLAYOFF RESULTS FOR 4/22/93. -------------------------------------------------------------------------------- CONFERENCE SEMI-FINALS BEST OF SEVEN PATRICK ADAMS NORRIS SMYTHE NJ BUF (leads 3-0) STL (leads 2-0) WIN PIT (leads 3-0) BOS..."
+      },
+      {
+        "id": 4436,
+        "score": 0.88812983,
+        "category": "rec.sport.hockey",
+        "text": "NHL PLAYOFF RESULTS FOR 4/21/93. -------------------------------------------------------------------------------- CONFERENCE SEMI-FINALS BEST OF SEVEN PATRICK ADAMS NORRIS SMYTHE NJ BUF (leads 2-0) STL (leads 2-0) WIN PIT (leads 2-0) BOS..."
+      },
+      {
+        "id": 2993,
+        "score": 0.90164196,
+        "category": "rec.sport.hockey",
+        "text": "I'd have to take Quebec in 6. Hawks will win, but it will take 5. Cal in 7. Boston will beat Quebec in 6. Pitt in 6. The Bruins arent a pushover. The hawks havent had problems with them all year. Yep, I agree. Unless the Hawks can someho..."
+      }
+    ],
+    "dot": [
+      {
+        "id": 5335,
+        "score": 0.6134084,
+        "category": "rec.sport.hockey",
+        "text": "Here is yet another prediction for them great playoffs! (you may laugh at your convenience!) :) Adams Division (I hate the NE (name) divisoin!!!) BOS vs BUF BOS in 5 (the B's are hot lately!) MON vs QUE MON in 7 (This will be the series ..."
+      },
+      {
+        "id": 3813,
+        "score": 0.61252654,
+        "category": "rec.sport.hockey",
+        "text": "Well, the tentative rules, anyway. And, of course, since the season is not entirely over, tentative entry form. But who cares? The real hockey season is starting!!!!! Here's the deal: You email (preferably) or post your predictions, AND ..."
+      },
+      {
+        "id": 207,
+        "score": 0.6104337,
+        "category": "rec.sport.hockey",
+        "text": "NHL PLAYOFF RESULTS FOR 4/22/93. -------------------------------------------------------------------------------- CONFERENCE SEMI-FINALS BEST OF SEVEN PATRICK ADAMS NORRIS SMYTHE NJ BUF (leads 3-0) STL (leads 2-0) WIN PIT (leads 3-0) BOS..."
+      },
+      {
+        "id": 4436,
+        "score": 0.60561275,
+        "category": "rec.sport.hockey",
+        "text": "NHL PLAYOFF RESULTS FOR 4/21/93. -------------------------------------------------------------------------------- CONFERENCE SEMI-FINALS BEST OF SEVEN PATRICK ADAMS NORRIS SMYTHE NJ BUF (leads 2-0) STL (leads 2-0) WIN PIT (leads 2-0) BOS..."
+      },
+      {
+        "id": 2993,
+        "score": 0.593521,
+        "category": "rec.sport.hockey",
+        "text": "I'd have to take Quebec in 6. Hawks will win, but it will take 5. Cal in 7. Boston will beat Quebec in 6. Pitt in 6. The Bruins arent a pushover. The hawks havent had problems with them all year. Yep, I agree. Unless the Hawks can someho..."
+      }
+    ],
+    "rank_order_differs": []
+  },
+  {
+    "query": "latest news about NASA space shuttle launch",
+    "cosine": [
+      {
+        "id": 3719,
+        "score": 0.52949345,
+        "category": "sci.space",
+        "text": "Well, you better not get the shuttle as your launch vehicle. and most ELV's have too far of a backlog for political messages. If during the campaign season, the candidates for president had launched one, right around now we'd be getting ..."
+      },
+      {
+        "id": 141,
+        "score": 0.50343287,
+        "category": "sci.space",
+        "text": "COMMERCIAL SPACE NEWS/SPACE TECHNOLOGY INVESTOR NUMBER 22 This is number twenty-two in an irregular series on commercial space activities. The commentaries included are my thoughts on these developments. Sigh... as usual, I've gotten beh..."
+      },
+      {
+        "id": 3325,
+        "score": 0.4799991,
+        "category": "sci.space",
+        "text": "This notice will be posted weekly in sci.space, sci.astro, and sci.space.shuttle. The Frequently Asked Questions (FAQ) list for sci.space and sci.astro is posted approximately monthly. It also covers many questions that come up on sci.sp..."
+      },
+      {
+        "id": 780,
+        "score": 0.4739838,
+        "category": "sci.space",
+        "text": "Next GPS launch is scheduled for June 24th."
+      },
+      {
+        "id": 3989,
+        "score": 0.4520391,
+        "category": "sci.space",
+        "text": "Has anyone heard of or Played Buzz Aldrin's Race into Space? Does anyone know when it is expected to be released...?"
+      }
+    ],
+    "euclid": [
+      {
+        "id": 3719,
+        "score": 0.9700583,
+        "category": "sci.space",
+        "text": "Well, you better not get the shuttle as your launch vehicle. and most ELV's have too far of a backlog for political messages. If during the campaign season, the candidates for president had launched one, right around now we'd be getting ..."
+      },
+      {
+        "id": 141,
+        "score": 0.9965613,
+        "category": "sci.space",
+        "text": "COMMERCIAL SPACE NEWS/SPACE TECHNOLOGY INVESTOR NUMBER 22 This is number twenty-two in an irregular series on commercial space activities. The commentaries included are my thoughts on these developments. Sigh... as usual, I've gotten beh..."
+      },
+      {
+        "id": 3325,
+        "score": 1.0198047,
+        "category": "sci.space",
+        "text": "This notice will be posted weekly in sci.space, sci.astro, and sci.space.shuttle. The Frequently Asked Questions (FAQ) list for sci.space and sci.astro is posted approximately monthly. It also covers many questions that come up on sci.sp..."
+      },
+      {
+        "id": 780,
+        "score": 1.0256863,
+        "category": "sci.space",
+        "text": "Next GPS launch is scheduled for June 24th."
+      },
+      {
+        "id": 3989,
+        "score": 1.0468628,
+        "category": "sci.space",
+        "text": "Has anyone heard of or Played Buzz Aldrin's Race into Space? Does anyone know when it is expected to be released...?"
+      }
+    ],
+    "dot": [
+      {
+        "id": 3719,
+        "score": 0.52949345,
+        "category": "sci.space",
+        "text": "Well, you better not get the shuttle as your launch vehicle. and most ELV's have too far of a backlog for political messages. If during the campaign season, the candidates for president had launched one, right around now we'd be getting ..."
+      },
+      {
+        "id": 141,
+        "score": 0.50343287,
+        "category": "sci.space",
+        "text": "COMMERCIAL SPACE NEWS/SPACE TECHNOLOGY INVESTOR NUMBER 22 This is number twenty-two in an irregular series on commercial space activities. The commentaries included are my thoughts on these developments. Sigh... as usual, I've gotten beh..."
+      },
+      {
+        "id": 3325,
+        "score": 0.4799991,
+        "category": "sci.space",
+        "text": "This notice will be posted weekly in sci.space, sci.astro, and sci.space.shuttle. The Frequently Asked Questions (FAQ) list for sci.space and sci.astro is posted approximately monthly. It also covers many questions that come up on sci.sp..."
+      },
+      {
+        "id": 780,
+        "score": 0.4739838,
+        "category": "sci.space",
+        "text": "Next GPS launch is scheduled for June 24th."
+      },
+      {
+        "id": 3989,
+        "score": 0.4520391,
+        "category": "sci.space",
+        "text": "Has anyone heard of or Played Buzz Aldrin's Race into Space? Does anyone know when it is expected to be released...?"
+      }
+    ],
+    "rank_order_differs": []
+  },
+  {
+    "query": "how public-key encryption and cryptography work",
+    "cosine": [
+      {
+        "id": 1898,
+        "score": 0.54388195,
+        "category": "sci.crypt",
+        "text": "Archive-name: cryptography-faq/part06 Last-modified: 1993/4/15 FAQ for sci.crypt, part 6: Public-Key Cryptography This is the sixth of ten parts of the sci.crypt FAQ. The parts are mostly independent, but you should read the first part b..."
+      },
+      {
+        "id": 5308,
+        "score": 0.47404596,
+        "category": "sci.crypt",
+        "text": "Thanks. Got that from two other sources as well. The full quote is as follows: From Dorothy Denning, CRYPTOGRAPHY AND DATA SECURITY, Addison-Wesley 1982,1983, page 8: \"Cryptosystems must satisfy three general requirements: \"1. The enciph..."
+      },
+      {
+        "id": 3864,
+        "score": 0.44689053,
+        "category": "sci.crypt",
+        "text": "I was wanting to ask the same question Dan Bernstein asked--how does the Clipper chip exchange keys? If the public key is only 80 or 160 bits long, does anyone know of any public-key schemes that are secure with that key size? (Diffie-He..."
+      },
+      {
+        "id": 864,
+        "score": 0.415524,
+        "category": "sci.crypt",
+        "text": "a global key G, plus one key U_C for each chip C. The user can choose a new session key K_P for each phone call P he makes. Chip C knows three keys: G, its own U_C, and the user's K_P. The government as a whole knows G and every U_C. App..."
+      },
+      {
+        "id": 3220,
+        "score": 0.41192454,
+        "category": "sci.crypt",
+        "text": "This is the one part that really scares me. Without the keys, it can likely be determined if a person is using the \"State Approved\" encryption method, and if not then that persons life is forfet, and the profits go to making more busts, ..."
+      }
+    ],
+    "euclid": [
+      {
+        "id": 1898,
+        "score": 0.9551105,
+        "category": "sci.crypt",
+        "text": "Archive-name: cryptography-faq/part06 Last-modified: 1993/4/15 FAQ for sci.crypt, part 6: Public-Key Cryptography This is the sixth of ten parts of the sci.crypt FAQ. The parts are mostly independent, but you should read the first part b..."
+      },
+      {
+        "id": 5308,
+        "score": 1.0256256,
+        "category": "sci.crypt",
+        "text": "Thanks. Got that from two other sources as well. The full quote is as follows: From Dorothy Denning, CRYPTOGRAPHY AND DATA SECURITY, Addison-Wesley 1982,1983, page 8: \"Cryptosystems must satisfy three general requirements: \"1. The enciph..."
+      },
+      {
+        "id": 3864,
+        "score": 1.0517694,
+        "category": "sci.crypt",
+        "text": "I was wanting to ask the same question Dan Bernstein asked--how does the Clipper chip exchange keys? If the public key is only 80 or 160 bits long, does anyone know of any public-key schemes that are secure with that key size? (Diffie-He..."
+      },
+      {
+        "id": 864,
+        "score": 1.0811808,
+        "category": "sci.crypt",
+        "text": "a global key G, plus one key U_C for each chip C. The user can choose a new session key K_P for each phone call P he makes. Chip C knows three keys: G, its own U_C, and the user's K_P. The government as a whole knows G and every U_C. App..."
+      },
+      {
+        "id": 3220,
+        "score": 1.084505,
+        "category": "sci.crypt",
+        "text": "This is the one part that really scares me. Without the keys, it can likely be determined if a person is using the \"State Approved\" encryption method, and if not then that persons life is forfet, and the profits go to making more busts, ..."
+      }
+    ],
+    "dot": [
+      {
+        "id": 1898,
+        "score": 0.54388195,
+        "category": "sci.crypt",
+        "text": "Archive-name: cryptography-faq/part06 Last-modified: 1993/4/15 FAQ for sci.crypt, part 6: Public-Key Cryptography This is the sixth of ten parts of the sci.crypt FAQ. The parts are mostly independent, but you should read the first part b..."
+      },
+      {
+        "id": 5308,
+        "score": 0.47404596,
+        "category": "sci.crypt",
+        "text": "Thanks. Got that from two other sources as well. The full quote is as follows: From Dorothy Denning, CRYPTOGRAPHY AND DATA SECURITY, Addison-Wesley 1982,1983, page 8: \"Cryptosystems must satisfy three general requirements: \"1. The enciph..."
+      },
+      {
+        "id": 3864,
+        "score": 0.44689053,
+        "category": "sci.crypt",
+        "text": "I was wanting to ask the same question Dan Bernstein asked--how does the Clipper chip exchange keys? If the public key is only 80 or 160 bits long, does anyone know of any public-key schemes that are secure with that key size? (Diffie-He..."
+      },
+      {
+        "id": 864,
+        "score": 0.415524,
+        "category": "sci.crypt",
+        "text": "a global key G, plus one key U_C for each chip C. The user can choose a new session key K_P for each phone call P he makes. Chip C knows three keys: G, its own U_C, and the user's K_P. The government as a whole knows G and every U_C. App..."
+      },
+      {
+        "id": 3220,
+        "score": 0.41192454,
+        "category": "sci.crypt",
+        "text": "This is the one part that really scares me. Without the keys, it can likely be determined if a person is using the \"State Approved\" encryption method, and if not then that persons life is forfet, and the profits go to making more busts, ..."
+      }
+    ],
+    "rank_order_differs": []
+  },
+  {
+    "query": "tips for selling a used car in good condition",
+    "cosine": [
+      {
+        "id": 2368,
+        "score": 0.55753374,
+        "category": "rec.autos",
+        "text": "Hi, I was looking for some helpful advice. I'm a university student with about $7000 to spend, and I'm looking for a used car. Does anyone have any useful advice they could offer to a first- time buyer? I'm not looking for anything sport..."
+      },
+      {
+        "id": 1559,
+        "score": 0.49407494,
+        "category": "misc.forsale",
+        "text": "F O R S A L E ================ Triumph Spitfire '76, 1500 - Convertible - 54,000k original miles - Burgandy Color - Wooden Dashboard - No rust - Garage kept - Heater - Chrome bumpers(not the black plastic crap) - Brand new top - Asking $..."
+      },
+      {
+        "id": 3956,
+        "score": 0.48633346,
+        "category": "rec.autos",
+        "text": "I bought a car with a defunct engine, to use for parts for my old but still running version of the same car. The car I bought has good tires. Is there anything in particular that I should do to store the defunct car long-term? I'd hate t..."
+      },
+      {
+        "id": 368,
+        "score": 0.47220337,
+        "category": "rec.autos",
+        "text": "I think the Blue Book is the NADA handbook for used car prices, no? Is the Blue Book value given the retail or wholesale value??? The Blue Book value isn't set in stone, though. Low milage, extra addons and stuff like that there can incr..."
+      },
+      {
+        "id": 2532,
+        "score": 0.46772563,
+        "category": "misc.forsale",
+        "text": "I have a '81 DATSUN 210 HATCHBAK forsale: It's a Blue Datsun Two doors (three, since it's a hatchback) 69,900 miles Automatic Very good condition (I hate to sell it, but Phila insurance is outrageous; I also don't need a car right now) I..."
+      }
+    ],
+    "euclid": [
+      {
+        "id": 2368,
+        "score": 0.9407084,
+        "category": "rec.autos",
+        "text": "Hi, I was looking for some helpful advice. I'm a university student with about $7000 to spend, and I'm looking for a used car. Does anyone have any useful advice they could offer to a first- time buyer? I'm not looking for anything sport..."
+      },
+      {
+        "id": 1559,
+        "score": 1.0059077,
+        "category": "misc.forsale",
+        "text": "F O R S A L E ================ Triumph Spitfire '76, 1500 - Convertible - 54,000k original miles - Burgandy Color - Wooden Dashboard - No rust - Garage kept - Heater - Chrome bumpers(not the black plastic crap) - Brand new top - Asking $..."
+      },
+      {
+        "id": 3956,
+        "score": 1.0135744,
+        "category": "rec.autos",
+        "text": "I bought a car with a defunct engine, to use for parts for my old but still running version of the same car. The car I bought has good tires. Is there anything in particular that I should do to store the defunct car long-term? I'd hate t..."
+      },
+      {
+        "id": 368,
+        "score": 1.0274208,
+        "category": "rec.autos",
+        "text": "I think the Blue Book is the NADA handbook for used car prices, no? Is the Blue Book value given the retail or wholesale value??? The Blue Book value isn't set in stone, though. Low milage, extra addons and stuff like that there can incr..."
+      },
+      {
+        "id": 2532,
+        "score": 1.0317699,
+        "category": "misc.forsale",
+        "text": "I have a '81 DATSUN 210 HATCHBAK forsale: It's a Blue Datsun Two doors (three, since it's a hatchback) 69,900 miles Automatic Very good condition (I hate to sell it, but Phila insurance is outrageous; I also don't need a car right now) I..."
+      }
+    ],
+    "dot": [
+      {
+        "id": 2368,
+        "score": 0.55753374,
+        "category": "rec.autos",
+        "text": "Hi, I was looking for some helpful advice. I'm a university student with about $7000 to spend, and I'm looking for a used car. Does anyone have any useful advice they could offer to a first- time buyer? I'm not looking for anything sport..."
+      },
+      {
+        "id": 1559,
+        "score": 0.49407494,
+        "category": "misc.forsale",
+        "text": "F O R S A L E ================ Triumph Spitfire '76, 1500 - Convertible - 54,000k original miles - Burgandy Color - Wooden Dashboard - No rust - Garage kept - Heater - Chrome bumpers(not the black plastic crap) - Brand new top - Asking $..."
+      },
+      {
+        "id": 3956,
+        "score": 0.48633346,
+        "category": "rec.autos",
+        "text": "I bought a car with a defunct engine, to use for parts for my old but still running version of the same car. The car I bought has good tires. Is there anything in particular that I should do to store the defunct car long-term? I'd hate t..."
+      },
+      {
+        "id": 368,
+        "score": 0.47220337,
+        "category": "rec.autos",
+        "text": "I think the Blue Book is the NADA handbook for used car prices, no? Is the Blue Book value given the retail or wholesale value??? The Blue Book value isn't set in stone, though. Low milage, extra addons and stuff like that there can incr..."
+      },
+      {
+        "id": 2532,
+        "score": 0.46772563,
+        "category": "misc.forsale",
+        "text": "I have a '81 DATSUN 210 HATCHBAK forsale: It's a Blue Datsun Two doors (three, since it's a hatchback) 69,900 miles Automatic Very good condition (I hate to sell it, but Phila insurance is outrageous; I also don't need a car right now) I..."
+      }
+    ],
+    "rank_order_differs": []
+  }
+]

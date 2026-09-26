@@ -54,3 +54,16 @@ python embed.py
 Generated files under `data/` are gitignored. The Qdrant dashboard will stay
 empty until Part 2 upserts vectors into collections.
 
+## Part 2: Distance metrics
+
+Qdrant must be running (`docker compose up -d`).
+
+```bash
+python qdrant_setup.py
+python compare.py
+```
+
+Creates three collections with the same 6,000 points (`news_cosine`,
+`news_euclid`, `news_dot`), runs the five queries against each, and writes
+`results/distance_metrics.json`. Open the collections in the dashboard.
+
