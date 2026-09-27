@@ -48,3 +48,37 @@ three metrics): query *how public-key encryption and cryptography work*
 → top hit id 1898, `sci.crypt`, a public-key FAQ. Query *who is likely
 to win the hockey playoffs this season* → all top-5 are
 `rec.sport.hockey`.
+
+## Part 3: HNSW vs exact search
+
+Same 6,000 cosine vectors. Ground truth is Qdrant search with
+`exact: true` on `news_cosine`. Default HNSW is that same collection
+(`m=16`, `ef_construct=100`). Under-tuned HNSW is `news_hnsw_untuned`
+(`m=4`, `ef_construct=16`). Search-time `ef` is 16, 64, and 128.
+`full_scan_threshold` is 20 on both so Qdrant actually uses the graph
+(its default threshold is 10,000, above our collection size).
+
+Overlap@5 = share of the exact top-5 ids that the method also returned
+(order does not matter). Latency is one timed `query_points` call per
+query, then averaged. Full numbers: `results/hnsw.json`.
+
+| Method | mean overlap@5 vs exact | mean latency (ms) |
+|--------|-------------------------|-------------------|
+| exact brute-force | 1.00 | 4.22 |
+| HNSW default ef=16 | 1.00 | 3.17 |
+| HNSW default ef=64 | 1.00 | 2.50 |
+| HNSW default ef=128 | 1.00 | 2.39 |
+| HNSW untuned ef=16 | 1.00 | 7.30 |
+| HNSW untuned ef=64 | 1.00 | 3.04 |
+| HNSW untuned ef=128 | 1.00 | 2.77 |
+
+Every HNSW config matched exact top-5 on all five queries. 6,000 points
+is small: even a thin graph (`m=4`) still reached the true neighbors.
+Latency on this laptop is noisy (local REST, one shot after a short
+warmup) and does not show a clean “higher `ef` = slower” line.
+
+What *would* make the under-tuned collection behave more like default:
+raise **`m`** (more neighbors per node) and/or **`ef_construct`**
+(better graph at build time). Raising search `ef` explores more of a
+weak graph and can help, but it does not rebuild connectivity. On this
+dataset we did not need that help.

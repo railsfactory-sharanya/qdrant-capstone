@@ -67,3 +67,9 @@ Creates three collections with the same 6,000 points (`news_cosine`,
 `news_euclid`, `news_dot`), runs the five queries against each, and writes
 `results/distance_metrics.json`. Open the collections in the dashboard.
 
+## Part 3: HNSW vs exact search
+
+Same commands rebuild collections (including `news_hnsw_untuned`) and now
+also write `results/hnsw.json`: exact search vs default HNSW vs under-tuned
+HNSW at `ef` 16, 64, and 128.
+
