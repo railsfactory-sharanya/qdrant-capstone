@@ -73,3 +73,13 @@ Same commands rebuild collections (including `news_hnsw_untuned`) and now
 also write `results/hnsw.json`: exact search vs default HNSW vs under-tuned
 HNSW at `ef` 16, 64, and 128.
 
+## Part 4: IVF-style index
+
+```bash
+python ivf.py
+python compare.py
+```
+
+`ivf.py` clusters the embeddings (KMeans) and searches at `nprobe` 1 and 8.
+`compare.py` writes `results/ivf.json` (overlap vs Qdrant exact, latency).
+

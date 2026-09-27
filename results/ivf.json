@@ -1,0 +1,282 @@
+{
+  "configs": [
+    {
+      "name": "ivf_nprobe1",
+      "nprobe": 1,
+      "n_clusters": 64,
+      "mean_overlap": 0.48,
+      "mean_latency_ms": 0.403,
+      "per_query": [
+        {
+          "query": "why does my graphics card driver crash after a Windows update",
+          "ids": [
+            1621,
+            1169,
+            5838,
+            5465,
+            1443
+          ],
+          "scores": [
+            0.3933771550655365,
+            0.3568965494632721,
+            0.3207802176475525,
+            0.31541678309440613,
+            0.31280651688575745
+          ],
+          "categories": [
+            "comp.os.ms-windows.misc",
+            "comp.os.ms-windows.misc",
+            "comp.os.ms-windows.misc",
+            "comp.os.ms-windows.misc",
+            "comp.sys.ibm.pc.hardware"
+          ],
+          "latency_ms": 1.017,
+          "overlap": 0.2
+        },
+        {
+          "query": "who is likely to win the hockey playoffs this season",
+          "ids": [
+            2993,
+            5967,
+            5878,
+            2228,
+            3689
+          ],
+          "scores": [
+            0.593520998954773,
+            0.5566163063049316,
+            0.5459405779838562,
+            0.5326259136199951,
+            0.5197053551673889
+          ],
+          "categories": [
+            "rec.sport.hockey",
+            "rec.sport.hockey",
+            "rec.sport.hockey",
+            "rec.sport.hockey",
+            "rec.sport.hockey"
+          ],
+          "latency_ms": 0.127,
+          "overlap": 0.2
+        },
+        {
+          "query": "latest news about NASA space shuttle launch",
+          "ids": [
+            3719,
+            141,
+            2427,
+            4537,
+            5445
+          ],
+          "scores": [
+            0.529493510723114,
+            0.5034328699111938,
+            0.4492192268371582,
+            0.41491925716400146,
+            0.4145675599575043
+          ],
+          "categories": [
+            "sci.space",
+            "sci.space",
+            "sci.space",
+            "sci.space",
+            "sci.space"
+          ],
+          "latency_ms": 0.256,
+          "overlap": 0.4
+        },
+        {
+          "query": "how public-key encryption and cryptography work",
+          "ids": [
+            5308,
+            864,
+            3220,
+            6,
+            576
+          ],
+          "scores": [
+            0.4740459620952606,
+            0.4155240058898926,
+            0.41192445158958435,
+            0.4102826714515686,
+            0.3951073884963989
+          ],
+          "categories": [
+            "sci.crypt",
+            "sci.crypt",
+            "sci.crypt",
+            "sci.crypt",
+            "sci.crypt"
+          ],
+          "latency_ms": 0.289,
+          "overlap": 0.6
+        },
+        {
+          "query": "tips for selling a used car in good condition",
+          "ids": [
+            2368,
+            1559,
+            3956,
+            368,
+            2532
+          ],
+          "scores": [
+            0.5575338006019592,
+            0.4940750002861023,
+            0.4863335192203522,
+            0.4722033739089966,
+            0.46772563457489014
+          ],
+          "categories": [
+            "rec.autos",
+            "misc.forsale",
+            "rec.autos",
+            "rec.autos",
+            "misc.forsale"
+          ],
+          "latency_ms": 0.325,
+          "overlap": 1.0
+        }
+      ]
+    },
+    {
+      "name": "ivf_nprobe8",
+      "nprobe": 8,
+      "n_clusters": 64,
+      "mean_overlap": 1.0,
+      "mean_latency_ms": 0.971,
+      "per_query": [
+        {
+          "query": "why does my graphics card driver crash after a Windows update",
+          "ids": [
+            982,
+            17,
+            309,
+            1621,
+            4382
+          ],
+          "scores": [
+            0.4384249150753021,
+            0.4167647361755371,
+            0.3971008062362671,
+            0.3933771550655365,
+            0.39003974199295044
+          ],
+          "categories": [
+            "comp.os.ms-windows.misc",
+            "comp.os.ms-windows.misc",
+            "comp.sys.ibm.pc.hardware",
+            "comp.os.ms-windows.misc",
+            "comp.graphics"
+          ],
+          "latency_ms": 0.874,
+          "overlap": 1.0
+        },
+        {
+          "query": "who is likely to win the hockey playoffs this season",
+          "ids": [
+            5335,
+            3813,
+            207,
+            4436,
+            2993
+          ],
+          "scores": [
+            0.6134084463119507,
+            0.612526535987854,
+            0.61043381690979,
+            0.6056127548217773,
+            0.593520998954773
+          ],
+          "categories": [
+            "rec.sport.hockey",
+            "rec.sport.hockey",
+            "rec.sport.hockey",
+            "rec.sport.hockey",
+            "rec.sport.hockey"
+          ],
+          "latency_ms": 0.568,
+          "overlap": 1.0
+        },
+        {
+          "query": "latest news about NASA space shuttle launch",
+          "ids": [
+            3719,
+            141,
+            3325,
+            780,
+            3989
+          ],
+          "scores": [
+            0.529493510723114,
+            0.5034329295158386,
+            0.4799991250038147,
+            0.4739838242530823,
+            0.4520391821861267
+          ],
+          "categories": [
+            "sci.space",
+            "sci.space",
+            "sci.space",
+            "sci.space",
+            "sci.space"
+          ],
+          "latency_ms": 0.928,
+          "overlap": 1.0
+        },
+        {
+          "query": "how public-key encryption and cryptography work",
+          "ids": [
+            1898,
+            5308,
+            3864,
+            864,
+            3220
+          ],
+          "scores": [
+            0.5438820123672485,
+            0.474045991897583,
+            0.44689053297042847,
+            0.41552403569221497,
+            0.41192448139190674
+          ],
+          "categories": [
+            "sci.crypt",
+            "sci.crypt",
+            "sci.crypt",
+            "sci.crypt",
+            "sci.crypt"
+          ],
+          "latency_ms": 1.387,
+          "overlap": 1.0
+        },
+        {
+          "query": "tips for selling a used car in good condition",
+          "ids": [
+            2368,
+            1559,
+            3956,
+            368,
+            2532
+          ],
+          "scores": [
+            0.5575338006019592,
+            0.4940749704837799,
+            0.4863334894180298,
+            0.4722033739089966,
+            0.46772560477256775
+          ],
+          "categories": [
+            "rec.autos",
+            "misc.forsale",
+            "rec.autos",
+            "rec.autos",
+            "misc.forsale"
+          ],
+          "latency_ms": 1.097,
+          "overlap": 1.0
+        }
+      ]
+    }
+  ]
+}

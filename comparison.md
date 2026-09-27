@@ -82,3 +82,28 @@ raise **`m`** (more neighbors per node) and/or **`ef_construct`**
 (better graph at build time). Raising search `ef` explores more of a
 weak graph and can help, but it does not rebuild connectivity. On this
 dataset we did not need that help.
+
+## Part 4: IVF-style index
+
+Qdrant has no IVF toggle, so `ivf.py` builds one: KMeans with **64**
+clusters, each centroid plus the document ids assigned to it (inverted
+lists). Search (`search_ivf`): take the `nprobe` nearest centroids, then
+exact cosine only on those lists, return top-5. Cosine matches the
+Qdrant exact collection (MiniLM unit vectors). Full numbers:
+`results/ivf.json`.
+
+| Method | mean overlap@5 vs exact | mean latency (ms) |
+|--------|-------------------------|-------------------|
+| IVF nprobe=1 | 0.48 | 0.40 |
+| IVF nprobe=8 | 1.00 | 0.97 |
+
+`nprobe=1` missed true neighbors on four of five queries (overlaps
+0.20, 0.20, 0.40, 0.60, 1.00). Example: *how public-key encryption and
+cryptography work* — exact top hit is id 1898 (`sci.crypt` public-key
+FAQ). At `nprobe=1` that id never appears (it lives in an un-probed
+list); at `nprobe=8` it is rank 1 again and overlap is 1.00.
+
+Raising `nprobe` scans more inverted lists, so recall moves toward
+brute force and latency goes up (0.40 ms → 0.97 ms). Same speed /
+accuracy idea as raising HNSW `ef`, different data structure. IVF does
+not appear in the Qdrant dashboard — it is in-process Python.

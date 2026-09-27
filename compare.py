@@ -2,6 +2,7 @@
 
 Part 2: cosine / Euclidean / dot-product collections.
 Part 3: exact search vs default HNSW vs under-tuned HNSW at several ef values.
+Part 4: from-scratch IVF at nprobe=1 and nprobe=8.
 """
 
 from __future__ import annotations
@@ -13,12 +14,15 @@ from pathlib import Path
 import numpy as np
 from qdrant_client import QdrantClient, models
 
-from embed import QUERY_VECTORS_PATH, load_queries
+from data import OUTPUT_PATH
+from embed import QUERY_VECTORS_PATH, VECTORS_PATH, load_queries
+from ivf import NPROBE_VALUES, build_ivf_index, print_index_summary, search_ivf
 from qdrant_setup import HNSW_DEFAULT_COLLECTION, HNSW_UNTUNED_COLLECTION, get_client
 
 RESULTS_DIR = Path("results")
 DISTANCE_RESULTS_PATH = RESULTS_DIR / "distance_metrics.json"
 HNSW_RESULTS_PATH = RESULTS_DIR / "hnsw.json"
+IVF_RESULTS_PATH = RESULTS_DIR / "ivf.json"
 SNIPPET_CHARS = 240
 EF_VALUES = (16, 64, 128)
 
@@ -189,6 +193,69 @@ def run_hnsw(client: QdrantClient, queries: list[str], query_vectors: np.ndarray
     return {"configs": blocks}
 
 
+def run_ivf(
+    queries: list[str],
+    query_vectors: np.ndarray,
+    exact_ids_by_query: list[list[int]],
+) -> dict:
+    documents = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+    by_id = {doc["id"]: doc for doc in documents}
+    vectors = np.load(VECTORS_PATH)
+    print("\nBuilding IVF index (KMeans)...")
+    started = time.perf_counter()
+    index = build_ivf_index(vectors)
+    print(f"Build time: {(time.perf_counter() - started) * 1000:.1f} ms")
+    print_index_summary(index)
+
+    blocks = []
+    for nprobe in NPROBE_VALUES:
+        name = f"ivf_nprobe{nprobe}"
+        per_query = []
+        print(f"\n===== {name} =====")
+        for index_q, query in enumerate(queries):
+            started = time.perf_counter()
+            pairs = search_ivf(query_vectors[index_q], nprobe=nprobe, k=5, index=index)
+            latency_ms = (time.perf_counter() - started) * 1000
+            hits = []
+            for doc_id, score in pairs:
+                doc = by_id[doc_id]
+                hits.append(
+                    {
+                        "id": doc_id,
+                        "score": score,
+                        "category": doc["category"],
+                        "text": snippet(doc["text"]),
+                    }
+                )
+            ids = ids_of(hits)
+            overlap = overlap_at_5(ids, exact_ids_by_query[index_q])
+            print_hits(f"{query}  overlap={overlap:.2f}", hits, latency_ms)
+            per_query.append(
+                {
+                    "query": query,
+                    "ids": ids,
+                    "scores": [hit["score"] for hit in hits],
+                    "categories": [hit["category"] for hit in hits],
+                    "latency_ms": round(latency_ms, 3),
+                    "overlap": overlap,
+                }
+            )
+        mean_overlap = sum(row["overlap"] for row in per_query) / len(per_query)
+        mean_latency = sum(row["latency_ms"] for row in per_query) / len(per_query)
+        print(f"mean overlap={mean_overlap:.2f}  mean latency={mean_latency:.2f} ms")
+        blocks.append(
+            {
+                "name": name,
+                "nprobe": nprobe,
+                "n_clusters": index["n_clusters"],
+                "mean_overlap": round(mean_overlap, 4),
+                "mean_latency_ms": round(mean_latency, 3),
+                "per_query": per_query,
+            }
+        )
+    return {"configs": blocks}
+
+
 def main() -> None:
     if not QUERY_VECTORS_PATH.exists():
         raise FileNotFoundError("Run python embed.py first")
@@ -214,6 +281,17 @@ def main() -> None:
     print("\n--- HNSW summary (mean over 5 queries) ---")
     print(f"{'config':<22} {'overlap@5':>10} {'latency_ms':>12}")
     for block in hnsw_results["configs"]:
+        print(f"{block['name']:<22} {block['mean_overlap']:>10.2f} {block['mean_latency_ms']:>12.2f}")
+
+    exact_ids = [row["ids"] for row in hnsw_results["configs"][0]["per_query"]]
+    print("\n######## Part 4: IVF ########")
+    ivf_results = run_ivf(queries, query_vectors, exact_ids)
+    IVF_RESULTS_PATH.write_text(json.dumps(ivf_results, indent=2), encoding="utf-8")
+    print(f"\nWrote {IVF_RESULTS_PATH}")
+
+    print("\n--- IVF summary (mean over 5 queries) ---")
+    print(f"{'config':<22} {'overlap@5':>10} {'latency_ms':>12}")
+    for block in ivf_results["configs"]:
         print(f"{block['name']:<22} {block['mean_overlap']:>10.2f} {block['mean_latency_ms']:>12.2f}")
 
 
