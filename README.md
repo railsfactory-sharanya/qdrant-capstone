@@ -83,3 +83,8 @@ python compare.py
 `ivf.py` clusters the embeddings (KMeans) and searches at `nprobe` 1 and 8.
 `compare.py` writes `results/ivf.json` (overlap vs Qdrant exact, latency).
 
+## Part 5: Combined comparison
+
+The write-up and one table are in `comparison.md` (Part 5). Numbers come
+from the JSON files already produced by `compare.py`.
+

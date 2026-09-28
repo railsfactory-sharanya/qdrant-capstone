@@ -107,3 +107,67 @@ Raising `nprobe` scans more inverted lists, so recall moves toward
 brute force and latency goes up (0.40 ms → 0.97 ms). Same speed /
 accuracy idea as raising HNSW `ef`, different data structure. IVF does
 not appear in the Qdrant dashboard — it is in-process Python.
+
+## Part 5: Combined comparison
+
+All numbers below are means over the same five queries. Overlap is
+versus Qdrant cosine exact search (`exact: true`). Latency is one timed
+search call per query (local REST; noisy). Sources: `results/hnsw.json`,
+`results/ivf.json`.
+
+| Method | mean overlap@5 vs exact | mean latency (ms) |
+|--------|-------------------------|-------------------|
+| exact brute-force | 1.00 | 4.22 |
+| HNSW default ef=16 | 1.00 | 3.17 |
+| HNSW default ef=64 | 1.00 | 2.50 |
+| HNSW default ef=128 | 1.00 | 2.39 |
+| HNSW untuned ef=16 | 1.00 | 7.30 |
+| HNSW untuned ef=64 | 1.00 | 3.04 |
+| HNSW untuned ef=128 | 1.00 | 2.77 |
+| IVF nprobe=1 | 0.48 | 0.40 |
+| IVF nprobe=8 | 1.00 | 0.97 |
+
+### Speed / accuracy as we gave the index more work
+
+Approximate indexes skip vectors on purpose. HNSW skips nodes it does
+not visit on the graph; IVF skips whole inverted lists. Giving the
+method more work means walking more of the graph (higher search `ef`)
+or scanning more clusters (higher `nprobe`). In the indexing unit that
+is the usual recall-vs-latency tradeoff: more candidates → closer to
+brute force → slower.
+
+On this 6,000-vector collection the two families did not behave the
+same. Every HNSW configuration already matched exact top-5 (overlap
+1.00), including the under-tuned graph (`m=4`) at `ef=16`. Extra `ef`
+therefore had no overlap left to improve. Latency also did not show a
+clean “higher `ef` = slower” line; one HTTP call on localhost jittered
+by a few milliseconds. That is a size finding: a small cosine set is
+easy for even a thin HNSW graph.
+
+IVF is where the tradeoff showed up. With `nprobe=1` we only exact-scan
+one KMeans list, so the true neighbor can sit in an un-probed cluster.
+Mean overlap was 0.48 (four of five queries missed at least one exact
+id). Raising `nprobe` to 8 added seven more lists; overlap went to 1.00
+and mean latency from 0.40 ms to 0.97 ms. The crypto query is the
+clearest case: exact top-1 id 1898 is absent at `nprobe=1` and rank 1
+again at `nprobe=8`.
+
+So the method that got closer to exact as we gave it more work was
+**IVF**. That matches the unit: more inverted lists examined, more of
+the dataset scored, closer to a full scan. HNSW would show the same
+curve on a larger or harder graph; here it was already at the top of
+the curve.
+
+### Metric choice vs index choice (Part 2)
+
+The spec asks for a Part 2 case where rank order changed with the
+distance metric while the index and dataset stayed identical. We did
+not observe that. Cosine, Euclidean, and dot product returned the same
+top-5 ids on every query because MiniLM vectors are unit length, so
+`dot = cosine` and Euclidean distance is a monotone function of cosine.
+That is still the right place to separate the two decisions: in Part 2
+we turned only the **metric** knob and ranking did not move; in Part 4
+we turned only the **index** knob (`nprobe`) on the same cosine vectors
+and overlap moved from 0.48 to 1.00. Metric and index are independent.
+If a future model left vectors unnormalized, the Part 2 knob could
+change top-1 even with this same HNSW setup.
